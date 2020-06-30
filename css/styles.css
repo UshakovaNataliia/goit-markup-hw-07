@@ -247,6 +247,7 @@ main {
   border-radius: 4px;
   min-width: 200px;
   padding: 10px 32px;
+  cursor: pointer;
 
   text-decoration: none;
   font-weight: 700;
@@ -812,6 +813,7 @@ button:active {
   top: 8px;
   right: 8px;
   margin-bottom: 2px;
+  cursor: pointer;
 
   fill: #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -847,6 +849,7 @@ h4 {
 }
 .checkbox-input {
   width: 100%;
+  cursor: pointer;
 
   padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -942,10 +945,12 @@ h4 {
 }
 .agree-input:checked + .agree-icon {
   border-color: transparent;
-  background-color: var(--accent-color);
-  background-image: url(../images/agree-icon.svg);
   background-size: contain;
   background-origin: border-box;
+
+  background-color: var(--accent-color);
+  background-image: url(../images/agree-icon.svg);
+  fill: var(--primary-white-color);
 }
 .agree-link {
   line-height: 1.71;
