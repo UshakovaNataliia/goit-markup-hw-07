@@ -118,21 +118,17 @@ ul {
 }
 
 /* Nav*/
-
-.header-portfolio {
+.header {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
   border-bottom: 1px solid #ececec;
+  background-color: var(--primary-white-color);
 }
 .header > .container {
   display: flex;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  border-bottom: 1px solid #ececec;
-
-  background-color: var(--primary-white-color);
 }
 .nav > a {
   margin-right: 60px;
@@ -247,7 +243,6 @@ main {
   border-radius: 4px;
   min-width: 200px;
   padding: 10px 32px;
-  cursor: pointer;
 
   text-decoration: none;
   font-weight: 700;
@@ -255,9 +250,17 @@ main {
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
+  color: var(--accent-color);
+  background-color: var(--primary-white-color);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  cursor: pointer;
   color: var(--primary-white-color);
-
   background-color: var(--accent-color);
 }
 
@@ -278,10 +281,7 @@ main {
   color: var(--secondary-text-color);
 }
 
-.container
-/* ,
-.section-title  */ {
-  /* display: flex; */
+.container {
   justify-content: center;
   text-align: center;
   width: 1200px;
@@ -456,9 +456,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 170px;
   height: 90px;
+
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
@@ -466,8 +465,8 @@ main {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customer-logo:last-child {
-  margin-right: 0;
+.customer-logo {
+  width: calc((100% - 150px) / 6);
 }
 .customer-link:hover,
 .customer-link:focus {
@@ -599,11 +598,12 @@ main {
 
   color: var(--primary-white-color);
 }
-.subscribe-form {
+.footer-form {
   display: flex;
 }
 .subscribe-input {
-  width: 358px;
+  width: 100%;
+  height: 50px;
   margin-right: 12px;
   padding: 15px 16px;
 
@@ -617,6 +617,10 @@ main {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: transparent;
+}
+
+.subscribe-input:focus::placeholder {
+  color: transparent;
 }
 
 .subscribe-button {
@@ -639,24 +643,18 @@ main {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
-.subscribe-button::after {
-  content: "";
-  display: inline-flex;
-  vertical-align: middle;
-  background-image: url(../images/icon-send.svg);
-  background-size: contain;
-  margin-left: 10px;
-  width: 24px;
-  height: 24px;
-}
 
+.icon-send {
+  fill: currentColor;
+  margin-left: 10px;
+}
 /* Портфолио */
 
 .filters {
   margin-bottom: 50px;
 }
 
-button {
+.button-filters {
   display: inline-block;
   border-radius: 4px;
   border: 0;
@@ -675,15 +673,14 @@ button {
 
   background-color: var(--background-elements-color);
 }
-.button-filters:not(:last-child) {
+.button-item:not(:last-child) {
   margin-right: 8px;
 }
-button:hover,
-button:focus,
-button:active {
+.button-filters:focus,
+.button-filters:hover,
+.button-filters:active {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
-  border: 0;
   border-radius: 4px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
@@ -746,7 +743,6 @@ button:active {
   bottom: 0;
   left: 0;
   padding: 63px 24px;
-  overflow: hidden;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(100%);
 
@@ -787,6 +783,7 @@ button:active {
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.2);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -796,8 +793,8 @@ button:active {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  min-width: 528px;
-  min-height: 581px;
+  max-width: 528px;
+  width: 100%;
   padding: 40px;
   text-align: center;
   color: var(--secondary-text-color);
@@ -812,13 +809,11 @@ button:active {
   position: absolute;
   top: 8px;
   right: 8px;
-  margin-bottom: 2px;
-  cursor: pointer;
 
   fill: #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  padding: 9px 9px 10px 10px;
+  padding: 5px;
   background-color: var(--primary-white-color);
 }
 .button-close:hover,
@@ -830,7 +825,7 @@ button:active {
   box-shadow: none;
   background-color: var(--primary-white-color);
 }
-h4 {
+.modal-title {
   margin-bottom: 30px;
 
   font-weight: 700;
@@ -846,10 +841,11 @@ h4 {
   display: block;
   position: relative;
   margin-bottom: 28px;
+  top: 0;
+  left: 0;
 }
 .checkbox-input {
   width: 100%;
-  cursor: pointer;
 
   padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -872,18 +868,21 @@ h4 {
 :placeholder-shown {
   color: var(--primary-white-color);
 }
-
+.checkbox-input:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
 .checkbox-input:focus + .checkbox-name,
 .checkbox-input:not(:placeholder-shown) + .checkbox-name {
-  transform: translate(-26px, -38px);
+  top: 0;
+  left: 16px;
+  transform: translate(0, calc(-100% - 4px));
 
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--accent-color);
-  border-color: var(--accent-color);
 }
-
 .checkbox-icon {
   position: absolute;
   top: 50%;
@@ -897,6 +896,7 @@ h4 {
 }
 
 .comment {
+  display: block;
   padding: 12px 16px;
   width: 100%;
   height: 120px;
@@ -908,12 +908,21 @@ h4 {
   line-height: 1.14;
   letter-spacing: 0.01em;
 }
-
+.comment:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+.comment:focus::placeholder {
+  color: var(--primary-white-color);
+}
 .agree-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
   margin-bottom: 30px;
+  width: 100%;
 
   line-height: 1.71;
   color: var(--primary-text-color);
@@ -933,24 +942,25 @@ h4 {
   overflow: hidden;
 }
 .agree-icon {
-  display: inline-block;
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: 16px;
   width: 16px;
   height: 15px;
-  vertical-align: middle;
-  margin-right: 8px;
   border-radius: 2px;
+  margin-right: 8px;
 
   border: 2px solid var(--secondary-text-color);
   background-color: var(--primary-white-color);
 }
 .agree-input:checked + .agree-icon {
   border-color: transparent;
-  background-size: contain;
-  background-origin: border-box;
-
   background-color: var(--accent-color);
   background-image: url(../images/agree-icon.svg);
   fill: var(--primary-white-color);
+  background-size: contain;
+  background-origin: border-box;
 }
 .agree-link {
   line-height: 1.71;

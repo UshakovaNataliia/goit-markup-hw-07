@@ -17,7 +17,7 @@
 
   <body>
     <!--Шапка-->
-    <header class="header header-portfolio">
+    <header class="header">
       <div class="container">
         <nav class="nav">
           <a href="./index.html" class="logo">
@@ -59,11 +59,21 @@
         <h1 class="portfolio section-none">Портфолио</h1>
         <!-- Фильтры -->
         <ul class="filters container">
-          <li class="button-filters"><button>Все</button></li>
-          <li class="button-filters"><button>Веб-сайты</button></li>
-          <li class="button-filters"><button>Приложения</button></li>
-          <li class="button-filters"><button>Дизайн</button></li>
-          <li class="button-filters"><button>Маркетинг</button></li>
+          <li class="button-item">
+            <button class="button-filters">Все</button>
+          </li>
+          <li class="button-item">
+            <button class="button-filters">Веб-сайты</button>
+          </li>
+          <li class="button-item">
+            <button class="button-filters">Приложения</button>
+          </li>
+          <li class="button-item">
+            <button class="button-filters">Дизайн</button>
+          </li>
+          <li class="button-item">
+            <button class="button-filters">Маркетинг</button>
+          </li>
         </ul>
         <ul class="portfolio-list container">
           <li class="portfolio-item">
@@ -291,10 +301,15 @@
         <div class="subscribe">
           <b class="subscribe-title">Подпишитесь на рассылку </b>
           <div class="subscribe-form">
-            <input type="text" class="subscribe-input" placeholder="E-mail" />
-            <button class="subscribe-button">
-              Подписаться
-            </button>
+            <form id="footer-form" class="footer-form">
+              <input type="text" class="subscribe-input" placeholder="E-mail" />
+              <button class="subscribe-button">
+                Подписаться
+                <svg class="icon-send" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </div>
