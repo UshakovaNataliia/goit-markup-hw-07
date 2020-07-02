@@ -32,7 +32,25 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 5) футер лого rgba(255, 255, 255, 0.1),
 активные #2196F3 */
 
-html {
+/* :root {
+  /* цвета текта */
+  --primary-text-color: #757575;
+  --secondary-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --footer-contacts-color: rgba(255, 255, 255, 0.6);
+  --footer-end-color: rgba(255, 255, 255, 0.4);
+  /* цвета фонов секций и элементов */
+  --background-services-color: rgba(47, 48, 58, 0.8);
+  --background-elements-color: #f5f4fa;
+  --background-hero-color: rgba(47, 48, 58, 0.8);
+  --background-sections-color: #e5e5e5; /* преимущества, чем мы занимаемся, клиенты */
+  --background-team-color: #f5f4fa; /* сотрудники */
+  --background-footer-color: #2f303a;
+  --background-footer-logo-color: rgba(255, 255, 255, 0.1);
+} */
+
+/* html {
   box-sizing: border-box;
 }
 
@@ -59,24 +77,6 @@ p {
   font-size: 14px;
 }
 
-:root {
-  /* цвета текта */
-  --primary-text-color: #757575;
-  --secondary-text-color: #212121;
-  --accent-color: #2196f3;
-  --primary-white-color: #ffffff;
-  --footer-contacts-color: rgba(255, 255, 255, 0.6);
-  --footer-end-color: rgba(255, 255, 255, 0.4);
-  /* цвета фонов секций и элементов */
-  --background-services-color: rgba(47, 48, 58, 0.8);
-  --background-elements-color: #f5f4fa;
-  --background-hero-color: rgba(47, 48, 58, 0.8);
-  --background-sections-color: #e5e5e5; /* преимущества, чем мы занимаемся, клиенты */
-  --background-team-color: #f5f4fa; /* сотрудники */
-  --background-footer-color: #2f303a;
-  --background-footer-logo-color: rgba(255, 255, 255, 0.1);
-}
-
 body {
   font-size: 14px;
   font-family: Roboto, sans-serif;
@@ -91,13 +91,14 @@ ul {
   text-decoration: none;
   margin: 0;
   padding: 0;
-}
+} */
+
 .section-none {
   display: none;
 }
 
 /* Шапка */
-.logo {
+/* .logo {
   text-decoration: none;
   font-family: Raleway;
   font-weight: 700;
@@ -115,36 +116,25 @@ ul {
   line-height: 1.19px;
   letter-spacing: 0.03em;
   color: #000000;
-}
+} */
 
 /* Nav*/
-.header {
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  left: 0;
-  right: 0;
-  border-bottom: 1px solid #ececec;
-  background-color: var(--primary-white-color);
-}
-.header > .container {
-  display: flex;
-}
-.nav > a {
+
+/* .nav > a {
   margin-right: 60px;
   padding-top: 24px;
   padding-bottom: 24px;
-}
-.nav,
+} */
+/* .nav,
 .site-nav,
 .contacts-nav {
   display: flex;
   align-items: center;
-}
-.contacts-nav {
+} */
+/* .contacts-nav {
   margin-left: auto;
-}
-.link {
+} */
+/* .link {
   display: inline-block;
   padding: 32px 0;
   text-decoration: none;
@@ -160,17 +150,17 @@ ul {
 .link:hover,
 .link:focus {
   color: var(--accent-color);
-}
+} */
 
-.site-nav-title:not(:last-child) {
+/* .site-nav-title:not(:last-child) {
   margin-right: 25px;
 }
 .site-nav-title {
   margin-left: 25px;
   position: relative;
-}
+} */
 
-.current {
+/* .current {
   color: var(--accent-color);
 }
 
@@ -184,8 +174,8 @@ ul {
   left: 0;
 
   background-color: var(--accent-color);
-}
-.contacts-nav a {
+} */
+/* .contacts-nav a {
   color: var(--primary-text-color);
 }
 .contacts-nav > li:not(:last-child) {
@@ -195,12 +185,12 @@ ul {
   fill: currentColor;
   margin-right: 10px;
   vertical-align: middle;
-}
-main {
+} */
+/* main {
   position: relative;
   top: 81px;
   z-index: 0;
-}
+} */
 /* Hero */
 .hero {
   padding-top: 200px;
@@ -265,7 +255,7 @@ main {
 }
 
 /* Секции */
-.section {
+/* .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -279,9 +269,9 @@ main {
   letter-spacing: 0.03em;
 
   color: var(--secondary-text-color);
-}
+} */
 
-.container {
+/* .container {
   justify-content: center;
   text-align: center;
   width: 1200px;
@@ -289,11 +279,11 @@ main {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 /* Преимущества */
 
-.advantages {
+/* .advantages {
   padding-bottom: 0;
 }
 .advantage.container {
@@ -344,11 +334,11 @@ main {
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
-}
+} */
 
 /* Услуги */
 
-.services-item {
+/* .services-item {
   width: calc((100%-60) / 3);
   margin-right: 30px;
   display: inline-block;
@@ -375,10 +365,10 @@ main {
   width: 100%;
   position: absolute;
   bottom: 0;
-}
+} */
 
 /* Сотрудники */
-.section.team {
+/* .section.team {
   background-color: var(--background-elements-color);
 }
 
@@ -445,11 +435,11 @@ main {
 .network-link:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
-}
+} */
 
 /* Клиенты */
 
-.customer-logo:not(:last-child) {
+/* .customer-logo:not(:last-child) {
   margin-right: 30px;
 }
 .customer-link {
@@ -475,10 +465,10 @@ main {
 }
 .customer-icon {
   fill: currentColor;
-}
+} */
 
 /* Футер */
-.footer {
+/* .footer {
   position: relative;
   top: 81px;
   bottom: 0;
@@ -647,10 +637,10 @@ main {
 .icon-send {
   fill: currentColor;
   margin-left: 10px;
-}
+} */
 /* Портфолио */
 
-.filters {
+/* .filters {
   margin-bottom: 50px;
 }
 
@@ -700,7 +690,7 @@ main {
   text-align: left;
   margin-right: 30px;
   margin-bottom: 30px;
-  width: cslc((100%-60px)/3);
+  width: calc((100%-60px)/3);
 }
 
 .portfolio-link {
@@ -762,15 +752,14 @@ main {
 .portfolio-link:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
-}
-
+} */
 /* Форма подписки */
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
   opacity: 1;
-  z-index: 2;
+  z-index: 100;
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   width: 100%;
